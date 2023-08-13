@@ -144,6 +144,10 @@ body {
   background: #05152E !important;
 }
 
+.cust-color-tertiary{
+  color: #EB455F;
+}
+
 
 /* Default slide */
 .center-slider .slick-slide {

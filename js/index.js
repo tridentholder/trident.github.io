@@ -92,7 +92,7 @@ $('#contact-sub-btn').click(function (e) {
     let email = $('input[name="emailId"]').val();
     
     $.ajax({
-      url: 'send_email.php', // Path to your server-side script
+      url: '../send_email.php',
       method: 'POST',
       data: { name: name, mobileNo: mobileNo, email: email },
       success: function(response) {

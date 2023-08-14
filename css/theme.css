@@ -137,14 +137,14 @@ body {
 }
 
 .cust-bg-primary {
-  background: #BAD7E9 !important;
+  background: #bad7e900 !important;
 }
 
 .cust-bg-secondary {
   background: #05152E !important;
 }
 
-.cust-color-tertiary{
+.cust-color-tertiary {
   color: #EB455F;
 }
 
@@ -8179,7 +8179,7 @@ input:-webkit-autofill:active {
   border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .border-end {
     border-right: 0 !important;
   }
@@ -15172,4 +15172,133 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0);
   }
+}
+
+
+.social-buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-button {
+  display: inline-block;
+  /* background-color: #fff; */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  opacity: .99;
+  border-radius: 28%;
+  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05); */
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+@media(max-width: 768px){
+  .social-button{
+    margin: 0 4px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+.social-button:before {
+  content: '';
+  background-color: #000;
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: 90%;
+  left: -110%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-button .fa {
+  font-size: 38px;
+  vertical-align: middle;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-button.facebook:before {
+  background-color: #3B5998;
+}
+
+.social-button.facebook .fa {
+  color: #3B5998;
+}
+
+
+.social-button.twitter:before {
+  background-color: #55acee;
+}
+
+.social-button.twitter .fa {
+  color: #55acee;
+}
+
+
+.social-button.google:before {
+  background-color: #dd4b39;
+}
+
+.social-button.google .fa {
+  color: #dd4b39;
+}
+
+
+.social-button.linkedin:before {
+  background-color: #007bb5;
+}
+
+.social-button.linkedin .fa {
+  color: #007bb5;
+}
+
+
+.social-button.instagram:before {
+  background-color: #e95950;
+}
+
+.social-button.instagram .fa {
+  color: #e95950;
+}
+
+.social-button.whatsapp:before {
+  background-color: #4dc247;
+}
+
+.social-button.whatsapp .fa {
+  color: #4dc247;
+}
+
+.social-button:focus:before,
+.social-button:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-button:focus .fa,
+.social-button:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }

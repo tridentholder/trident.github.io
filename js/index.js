@@ -21,6 +21,11 @@ $('.center-slider').slick({
   ]
 });
 
+$('.navbar-brand').click(function(e){
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+})
+
 customValidation($('#contactus-form'));
 
 function customValidation($form) {
@@ -81,5 +86,22 @@ $('#contact-sub-btn').click(function (e) {
   e.preventDefault();
   if ($('#contactus-form').valid()) {
     console.log("Form Valid");
+
+    let name = $('input[name="fullname"]').val();
+    let mobileNo = $('input[name="mobileno"]').val();
+    let email = $('input[name="emailId"]').val();
+    
+    $.ajax({
+      url: 'send_email.php', // Path to your server-side script
+      method: 'POST',
+      data: { name: name, mobileNo: mobileNo, email: email },
+      success: function(response) {
+        console.log('Email sent successfully:', response);
+      },
+      error: function(error) {
+        console.error('Error sending email:', error);
+      }
+    });
+
   };
 })

@@ -285,8 +285,8 @@
                 don´t want to start anything with you or anyone else.</h2>
             </div>
             <div class="col-12">
-              <div class="btn btn-warning btn-xl shadow me-3 mt-4" data-bs-toggle="modal" data-bs-target="#x"
-                data-aos="fade-down">Get in contact</div>
+              <div class="btn btn-warning btn-xl shadow me-3 mt-4"
+                data-aos="fade-down" id="emailDiv">Get in contact</div>
             </div>
           </div>
 
@@ -728,46 +728,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="modal fade" id="x" tabindex="-1" aria-labelledby="contactModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h5 class="mb-0 w-100 text-center pb-3 border-bottom border-dark">
-            Get in Contact
-          </h5>
-
-          <div class="row justify-content-center mt-md-5 mt-3 pb-md-3 flex-column align-items-center">
-            <form action="" class="d-flex flex-column align-items-center" id="contactus-form">
-              <div class="form-group cust-form-group">
-                <input type="text" required class="form-control cust-form-control " placeholder="Name"
-                  data-validation-msg-req="The Name is required" data-validation-msg-format="Invalid Name"
-                  name="fullname">
-              </div>
-
-              <div class="form-group cust-form-group">
-                <input type="tel" class="form-control cust-form-control mobile-number" required placeholder="Mobile No."
-                  data-validation-msg-req="Please Enter a valid Mobile Number" name="mobileno"
-                  data-validation-msg-format="Enter correct mobile number"
-                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="10">
-              </div>
-
-              <div class="form-group cust-form-group">
-                <input type="text" required class="form-control cust-form-control email" placeholder="Email"
-                  data-validation-msg-req="Email is required" data-validation-msg-format="Invalid Email" name="emailId">
-              </div>
-
-              <a href="" type="Submit" class="btn btn-dark btn-xl shadow me-3 rounded-0 cust-btn w-25 mt-3"
-                id="contact-sub-btn">Submit</a>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>

@@ -21,7 +21,7 @@ $('.center-slider').slick({
   ]
 });
 
-$('.navbar-brand').click(function(e){
+$('.navbar-brand').click(function (e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, 'slow');
 })
@@ -82,26 +82,9 @@ function customValidation($form) {
   });
 }
 
-$('#contact-sub-btn').click(function (e) {
-  e.preventDefault();
-  if ($('#contactus-form').valid()) {
-    console.log("Form Valid");
-
-    let name = $('input[name="fullname"]').val();
-    let mobileNo = $('input[name="mobileno"]').val();
-    let email = $('input[name="emailId"]').val();
-    
-    $.ajax({
-      url: '../send_email.php',
-      method: 'POST',
-      data: { name: name, mobileNo: mobileNo, email: email },
-      success: function(response) {
-        console.log('Email sent successfully:', response);
-      },
-      error: function(error) {
-        console.error('Error sending email:', error);
-      }
-    });
-
-  };
-})
+$('#emailDiv').click(function () {
+  var emailAddress = 'edyrooverseas@gmail.com';
+  var subject = 'Service Enquiry';
+  var mailtoLink = 'mailto:' + encodeURIComponent(emailAddress) + '?subject=' + encodeURIComponent(subject);
+  window.location.href = mailtoLink;
+});
